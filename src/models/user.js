@@ -9,16 +9,22 @@ const userSchema = new Schema(
       trim: true,
       required: false,
     },
+
     email: {
       type: String,
       trim: true,
       required: true,
       unique: true,
     },
+
     password: {
       type: String,
       required: true,
       minlength: 8,
+    },
+    avatar: {
+      type: String,
+      default: 'https://ac.goit.global/fullstack/react/default-avatar.jpg',
     },
   },
   {

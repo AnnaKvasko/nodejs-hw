@@ -28,12 +28,12 @@ app.use(
   }),
 );
 
-app.use('/auth', authRoutes);
-app.use('/notes', notesRoutes);
-app.use('/users', userRoutes);
+app.use(authRoutes);
+app.use(notesRoutes);
+app.use(userRoutes);
 
-app.use(errors());
 app.use(notFoundHandler);
+app.use(errors());
 app.use(errorHandler);
 
 const PORT = process.env.PORT || 3000;

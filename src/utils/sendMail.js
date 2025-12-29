@@ -13,12 +13,14 @@ const transporter = nodemailer.createTransport({
 
 export const sendEmail = async ({ to, subject, html }) => {
   try {
-    await transporter.sendMail({
+    const result = await transporter.sendMail({
       from: process.env.SMTP_FROM,
       to,
       subject,
       html,
     });
+
+    return result;
   } catch (err) {
     throw createHttpError(
       500,

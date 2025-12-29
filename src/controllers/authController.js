@@ -135,8 +135,9 @@ export const requestResetEmail = async (req, res, next) => {
 
     const templateSource = await fs.readFile(templatePath, 'utf-8');
     const template = handlebars.compile(templateSource);
+
     const html = template({
-      name: user.name || user.email,
+      name: user.username || user.email,
       link: resetLink,
     });
 
