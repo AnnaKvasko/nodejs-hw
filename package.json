@@ -4,6 +4,7 @@
   "main": "src/server.js",
   "type": "module",
   "scripts": {
+    "start": "node src/server.js",
     "dev": "nodemon src/server.js"
   },
   "repository": {
@@ -29,6 +30,8 @@
     "cors": "^2.8.5",
     "dotenv": "^17.2.3",
     "express": "^5.1.0",
+    "http-errors": "^2.0.1",
+    "mongoose": "^9.0.1",
     "pino-http": "^11.0.0"
   }
 }
